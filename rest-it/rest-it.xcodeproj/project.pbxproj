@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153715D11F67770C00278300 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153715D01F67770C00278300 /* Enums.swift */; };
 		153C79711F676A50009456DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C79701F676A50009456DE /* AppDelegate.swift */; };
 		153C79761F676A50009456DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 153C79741F676A50009456DE /* Main.storyboard */; };
 		153C79791F676A51009456DE /* rest_it.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153C79771F676A51009456DE /* rest_it.xcdatamodeld */; };
 		153C797B1F676A51009456DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 153C797A1F676A51009456DE /* Assets.xcassets */; };
 		153C797E1F676A51009456DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 153C797C1F676A51009456DE /* LaunchScreen.storyboard */; };
 		153C79861F677037009456DE /* RESTController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C79851F677037009456DE /* RESTController.swift */; };
+		6422B5FF91D5580154CD3661 /* Pods_rest_it.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6620504F150F00116306B71 /* Pods_rest_it.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		153715D01F67770C00278300 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		153C796D1F676A50009456DE /* rest-it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rest-it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		153C79701F676A50009456DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		153C79751F676A50009456DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		153C797D1F676A51009456DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		153C797F1F676A51009456DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		153C79851F677037009456DE /* RESTController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTController.swift; sourceTree = "<group>"; };
+		852E93082FA5DFE3D67A9560 /* Pods-rest-it.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rest-it.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rest-it/Pods-rest-it.debug.xcconfig"; sourceTree = "<group>"; };
+		C6620504F150F00116306B71 /* Pods_rest_it.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rest_it.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4973B30BBA5DFA8216FC6BC /* Pods-rest-it.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rest-it.release.xcconfig"; path = "Pods/Target Support Files/Pods-rest-it/Pods-rest-it.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6422B5FF91D5580154CD3661 /* Pods_rest_it.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		153715CF1F6776F000278300 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				153715D01F67770C00278300 /* Enums.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		153C79641F676A50009456DE = {
 			isa = PBXGroup;
 			children = (
 				153C796F1F676A50009456DE /* rest-it */,
 				153C796E1F676A50009456DE /* Products */,
+				AE63983963CBDDD51FFE3387 /* Pods */,
+				45B6E2EAC05C80D53022ECAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,7 @@
 		153C796F1F676A50009456DE /* rest-it */ = {
 			isa = PBXGroup;
 			children = (
+				153715CF1F6776F000278300 /* Entities */,
 				153C79701F676A50009456DE /* AppDelegate.swift */,
 				153C79741F676A50009456DE /* Main.storyboard */,
 				153C797A1F676A51009456DE /* Assets.xcassets */,
@@ -67,6 +85,23 @@
 			path = "rest-it";
 			sourceTree = "<group>";
 		};
+		45B6E2EAC05C80D53022ECAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6620504F150F00116306B71 /* Pods_rest_it.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE63983963CBDDD51FFE3387 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				852E93082FA5DFE3D67A9560 /* Pods-rest-it.debug.xcconfig */,
+				E4973B30BBA5DFA8216FC6BC /* Pods-rest-it.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 153C79821F676A51009456DE /* Build configuration list for PBXNativeTarget "rest-it" */;
 			buildPhases = (
+				2B653C77D63BF8B7C8B0CAED /* [CP] Check Pods Manifest.lock */,
 				153C79691F676A50009456DE /* Sources */,
 				153C796A1F676A50009456DE /* Frameworks */,
 				153C796B1F676A50009456DE /* Resources */,
+				2DA04A5C580111BA00C75F7F /* [CP] Embed Pods Frameworks */,
+				056A07BD0BF28DA53F52C70B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +173,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		056A07BD0BF28DA53F52C70B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rest-it/Pods-rest-it-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B653C77D63BF8B7C8B0CAED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2DA04A5C580111BA00C75F7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rest-it/Pods-rest-it-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		153C79691F676A50009456DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +228,7 @@
 			files = (
 				153C79791F676A51009456DE /* rest_it.xcdatamodeld in Sources */,
 				153C79711F676A50009456DE /* AppDelegate.swift in Sources */,
+				153715D11F67770C00278300 /* Enums.swift in Sources */,
 				153C79861F677037009456DE /* RESTController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +352,7 @@
 		};
 		153C79831F676A51009456DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852E93082FA5DFE3D67A9560 /* Pods-rest-it.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7Q622VMT25;
@@ -278,6 +366,7 @@
 		};
 		153C79841F676A51009456DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4973B30BBA5DFA8216FC6BC /* Pods-rest-it.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7Q622VMT25;
@@ -308,6 +397,7 @@
 				153C79841F676A51009456DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

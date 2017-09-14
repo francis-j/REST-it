@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class RESTController: UIViewController {
+class RESTController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var SelectMethodButton: UIButton!
     @IBOutlet weak var AddHeadersButton: UIButton!
@@ -17,19 +19,55 @@ class RESTController: UIViewController {
     @IBOutlet weak var BodyText: UITextView!
     @IBOutlet weak var HeadersTable: UITableView!
     
+    private var httpMethod:HTTPMethod!;
+    private var httpHeaders:HTTPHeaders!;
+    private var httpResult:String?;
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard");
+        view.addGestureRecognizer(tap);
+        self.UrlText.delegate = self;
 
-        // Do any additional setup after loading the view.
+        self.httpMethod = HTTPMethod.get;
+        self.httpHeaders = HTTPHeaders.init();
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true);
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true);
+        return false;
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func SelectMethodButtonClicked(_ sender: UIButton) {
         
+    }
+    
+    private func SetMethod(method:String) {
+        switch (method) {
+            case "GET":
+                self.httpMethod = HTTPMethod.get;
+                break;
+            case "POST":
+                self.httpMethod = HTTPMethod.post;
+                break;
+            case "PUT":
+                self.httpMethod = HTTPMethod.put;
+                break;
+            case "DELETE":
+                self.httpMethod = HTTPMethod.delete;
+                break;
+            default:
+                break;
+        }
     }
     
     @IBAction func AddHeadersButtonClicked(_ sender: UIButton) {
@@ -37,9 +75,28 @@ class RESTController: UIViewController {
     }
     
     @IBAction func SendButtonClicked(_ sender: UIButton) {
+        let url = self.UrlText.text!;
+        //headers
+        let body = self.BodyText.text!;
         
+        let params = JSON.parse(body).dictionaryValue;
+        
+        Alamofire.request(url,
+            method: self.httpMethod,
+            parameters: params,
+            headers: self.httpHeaders)
+            .responseString { (response) -> Void in
+                
+                if (response.result.value != nil)
+                {
+                    let json = JSON(response.result.value!);
+                    
+                    let alert = UIAlertController(title: "Result", message: json.stringValue, preferredStyle: .actionSheet);
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil);
+                }
+        }
     }
-    
 
     /*
     // MARK: - Navigation
