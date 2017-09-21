@@ -19,7 +19,7 @@ class RESTController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var BodyText: UITextView!
     @IBOutlet weak var HeadersTable: UITableView!
     
-    private var httpMethod:HTTPMethod!;
+    internal var httpMethod:HTTPMethod!;
     private var httpHeaders:HTTPHeaders!;
     private var httpResult:String?;
     
@@ -31,6 +31,7 @@ class RESTController: UIViewController, UITextFieldDelegate {
         self.UrlText.delegate = self;
 
         self.httpMethod = HTTPMethod.get;
+        self.SetMethodTitleLabel(method: self.httpMethod);
         self.httpHeaders = HTTPHeaders.init();
     }
     
@@ -48,7 +49,10 @@ class RESTController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func SelectMethodButtonClicked(_ sender: UIButton) {
-        
+        let methodVC = storyboard?.instantiateViewController(withIdentifier: "MethodViewController") as! MethodViewController;
+        methodVC.modalPresentationStyle = .overCurrentContext;
+        methodVC.delegate = self;
+        present(methodVC, animated: true, completion: nil);
     }
     
     private func SetMethod(method:String) {
@@ -97,6 +101,10 @@ class RESTController: UIViewController, UITextFieldDelegate {
                 }
         }
     }
+    
+    internal func SetMethodTitleLabel(method:HTTPMethod) {
+        self.SelectMethodButton.titleLabel?.text = method.rawValue;
+    }
 
     /*
     // MARK: - Navigation
@@ -108,4 +116,11 @@ class RESTController: UIViewController, UITextFieldDelegate {
     }
     */
 
+}
+
+extension RESTController: MethodDelegate {
+    func didSelectMethod(method: HTTPMethod) {
+        self.SetMethodTitleLabel(method: method);
+        self.httpMethod = method;
+    }
 }
