@@ -16,6 +16,7 @@
 		153C79861F677037009456DE /* RESTController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C79851F677037009456DE /* RESTController.swift */; };
 		159FB04E1F6B398800CD9E52 /* MethodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159FB04D1F6B398800CD9E52 /* MethodViewCell.swift */; };
 		159FB0511F740F6E00CD9E52 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159FB0501F740F6E00CD9E52 /* PopupView.swift */; };
+		159FB0531F74181C00CD9E52 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159FB0521F74181C00CD9E52 /* RealmController.swift */; };
 		15A099B71F6B26990061F65B /* MethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A099B61F6B26990061F65B /* MethodViewController.swift */; };
 		6422B5FF91D5580154CD3661 /* Pods_rest_it.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6620504F150F00116306B71 /* Pods_rest_it.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		153C79851F677037009456DE /* RESTController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTController.swift; sourceTree = "<group>"; };
 		159FB04D1F6B398800CD9E52 /* MethodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodViewCell.swift; sourceTree = "<group>"; };
 		159FB0501F740F6E00CD9E52 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		159FB0521F74181C00CD9E52 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		15A099B61F6B26990061F65B /* MethodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodViewController.swift; sourceTree = "<group>"; };
 		852E93082FA5DFE3D67A9560 /* Pods-rest-it.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rest-it.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rest-it/Pods-rest-it.debug.xcconfig"; sourceTree = "<group>"; };
 		C6620504F150F00116306B71 /* Pods_rest_it.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rest_it.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				153C79851F677037009456DE /* RESTController.swift */,
 				15A099B61F6B26990061F65B /* MethodViewController.swift */,
 				159FB04D1F6B398800CD9E52 /* MethodViewCell.swift */,
+				159FB0521F74181C00CD9E52 /* RealmController.swift */,
 			);
 			path = "rest-it";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				15A099B71F6B26990061F65B /* MethodViewController.swift in Sources */,
 				153C79711F676A50009456DE /* AppDelegate.swift in Sources */,
 				159FB04E1F6B398800CD9E52 /* MethodViewCell.swift in Sources */,
+				159FB0531F74181C00CD9E52 /* RealmController.swift in Sources */,
 				153715D11F67770C00278300 /* Enums.swift in Sources */,
 				153C79861F677037009456DE /* RESTController.swift in Sources */,
 			);
